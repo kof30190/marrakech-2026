@@ -258,6 +258,9 @@ body.dark .stat-item:nth-child(2n) .stat-number{color:#9fb0ff}
 .lightbox img{width:auto;height:auto}
 /* Toutes les vidéos : lecteur exactement au ratio de la vidéo (plus de bandes noires) */
 .tl-video video{height:auto;max-height:none;aspect-ratio:var(--r)}
+/* Qualité grand écran (09/11/2026) : photos jamais étirées au-delà de leur taille réelle (1280 px) */
+.tl-photo img{max-width:min(100%,1280px)}
+.lightbox img{max-width:min(90vw,1280px);max-height:min(80vh,1280px)}
 @media(max-width:768px){.gallery{columns:2}}
 @media(max-width:600px){
 .tl-duo{flex-direction:column;gap:0}
