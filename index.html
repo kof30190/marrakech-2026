@@ -261,6 +261,8 @@ body.dark .stat-item:nth-child(2n) .stat-number{color:#9fb0ff}
 /* Qualité grand écran (09/11/2026) : photos jamais étirées au-delà de leur taille réelle (1280 px) */
 .tl-photo img{max-width:min(100%,1280px)}
 .lightbox img{max-width:min(90vw,1280px);max-height:min(80vh,1280px)}
+/* Visionneuse HD (10/11/2026) : jusqu'à la largeur réelle de la photo (2400 px max), jamais étirée */
+.lightbox img{max-width:min(92vw,2400px);max-height:min(80vh,2400px)}
 @media(max-width:768px){.gallery{columns:2}}
 @media(max-width:600px){
 .tl-duo{flex-direction:column;gap:0}
@@ -318,7 +320,7 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 
 <div class="stats-grid">
 <div class="stat-item"><div class="stat-icon">🗓</div><div class="stat-number" data-target="4">0</div><div class="stat-label">Jours</div></div>
-<div class="stat-item"><div class="stat-icon">📸</div><div class="stat-number" data-target="96">0</div><div class="stat-label">Photos</div></div>
+<div class="stat-item"><div class="stat-icon">📸</div><div class="stat-number" data-target="112">0</div><div class="stat-label">Photos</div></div>
 <div class="stat-item"><div class="stat-icon">🎬</div><div class="stat-number" data-target="7">0</div><div class="stat-label">Vidéos</div></div>
 <div class="stat-item"><div class="stat-icon">🏛</div><div class="stat-number" data-target="9">0</div><div class="stat-label">Lieux</div></div>
 <div class="stat-item"><div class="stat-icon">🍽</div><div class="stat-number" data-target="4">0</div><div class="stat-label">Tables</div></div>
@@ -380,6 +382,22 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <img width="1280" height="576" class="paysage" src="images/jour1/07-terrasse-couverte-du-camp.jpg" alt="Terrasse couverte du camp" loading="lazy">
 <div class="tl-photo-caption">Terrasse couverte du camp</div>
 </div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/07a-arrivee-au-camp-sacs-sur-le-dos.jpg" alt="Arrivée au camp, sacs sur le dos, sur les tapis rouges" loading="lazy">
+<div class="tl-photo-caption">Arrivée au camp, sacs sur le dos, sur les tapis rouges</div>
+</div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/07c-fanny-christophe-et-michele-arrivent-sur-les-tapis.jpg" alt="Fanny, Christophe et Michele arrivent au camp sur les tapis rouges" loading="lazy">
+<div class="tl-photo-caption">Fanny, Christophe et Michele arrivent au camp sur les tapis rouges</div>
+</div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/07b-les-tentes-du-camp-au-pied-des-collines.jpg" alt="Les tentes du camp au pied des collines" loading="lazy">
+<div class="tl-photo-caption">Les tentes du camp au pied des collines</div>
+</div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/07d-palmiers-et-pavillons-a-l-entree-du-camp.jpg" alt="Palmiers et pavillons à l&#x27;entrée du camp" loading="lazy">
+<div class="tl-photo-caption">Palmiers et pavillons à l'entrée du camp</div>
+</div>
 <div class="tl-gps"><a href="https://maps.google.com/?q=31.47,-8.17" target="_blank" rel="noopener">📍 Camp du désert d'Agafay (zone approximative) · 31.470, -8.170</a></div>
 </div>
 <div class="tl-item"><div class="tl-dot"></div>
@@ -397,6 +415,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.2222">
 <img width="1280" height="576" class="paysage" src="images/jour1/10-christophe-sous-la-galerie-du-camp.jpg" alt="Christophe sous la galerie du camp" loading="lazy">
 <div class="tl-photo-caption">Christophe sous la galerie du camp</div>
+</div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/17a-la-piscine-du-camp-entre-palmiers-et-transats.jpg" alt="La piscine du camp entre palmiers et transats" loading="lazy">
+<div class="tl-photo-caption">La piscine du camp entre palmiers et transats</div>
 </div>
 <div class="info-box"><h4>🏜 Le désert d'Agafay</h4><p>Agafay n'est pas un désert de dunes : c'est un reg, une étendue de pierres et de rocailles claires, à une trentaine de kilomètres au sud-ouest de Marrakech, sur les premières hauteurs du Haut-Atlas. Quelques centaines de mètres d'altitude, des collines blanches et ocre, une oasis d'eucalyptus, d'oliviers et de vignes alimentée par un oued. Ce n'est pas non plus un désert au sens strict — la zone est de superficie réduite — mais l'horizon est vide, et c'est bien ce qu'on était venus chercher.</p><p class="info-sources">Sources : <a href="https://fr.wikipedia.org/wiki/D%C3%A9sert_d%27Agafay" target="_blank" rel="noopener">fr.wikipedia.org</a> · <a href="https://en-us.topographic-map.com/map-s1gsf3/Agafay/" target="_blank" rel="noopener">en-us.topographic-map.com</a></p></div>
 </div>
@@ -421,9 +443,27 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <img width="1280" height="721" class="paysage" src="images/jour1/21-casques-visses-depart-de-la-balade-en-quad.jpg" alt="Casques vissés, départ de la balade en quad" loading="lazy">
 <div class="tl-photo-caption">Casques vissés, départ de la balade en quad</div>
 </div>
+<div class="tl-duo">
+<div class="tl-photo portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour1/21a-fanny-casquee-avant-le-depart-en-quad.jpg" alt="Fanny, casquée, avant le départ en quad" loading="lazy">
+<div class="tl-photo-caption">Fanny, casquée, avant le départ en quad</div>
+</div>
+<div class="tl-photo portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour1/21b-olive-et-fanny-sur-leur-quad.jpg" alt="Olive et Fanny sur leur quad" loading="lazy">
+<div class="tl-photo-caption">Olive et Fanny sur leur quad</div>
+</div>
+</div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/21c-selfie-casque-olive-et-fanny-en-quad.jpg" alt="Selfie casqué d&#x27;Olive et Fanny en quad" loading="lazy">
+<div class="tl-photo-caption">Selfie casqué d'Olive et Fanny en quad</div>
+</div>
 <div class="tl-photo portrait" onclick="openLightbox(this)" style="--r:0.5633">
 <img width="721" height="1280" class="portrait" src="images/jour1/23-jeune-olivier-dans-la-terre-seche.jpg" alt="Jeune olivier dans la terre sèche" loading="lazy">
 <div class="tl-photo-caption">Jeune olivier dans la terre sèche</div>
+</div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/31a-la-plaine-d-agafay-l-atlas-dans-les-nuages.jpg" alt="La plaine d&#x27;Agafay, l&#x27;Atlas dans les nuages" loading="lazy">
+<div class="tl-photo-caption">La plaine d'Agafay, l'Atlas dans les nuages</div>
 </div>
 </div>
 <div class="tl-item"><div class="tl-dot"></div>
@@ -433,6 +473,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:1.3928">
 <img width="1280" height="919" class="paysage" src="images/jour1/32-dromadaire-a-l-ombre-de-l-abri-quads-gares.jpg" alt="Dromadaire à l&#x27;ombre de l&#x27;abri, quads garés" loading="lazy">
 <div class="tl-photo-caption">Dromadaire à l'ombre de l'abri, quads garés</div>
+</div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.4641">
+<img width="1646" height="668" class="paysage" src="images/jour1/32a-la-caravane-passe-au-loin-vue-de-la-terrasse.jpg" alt="La caravane passe au loin, vue de la terrasse" loading="lazy">
+<div class="tl-photo-caption">La caravane passe au loin, vue de la terrasse</div>
 </div>
 <div class="tl-photo portrait" onclick="openLightbox(this)" style="--r:0.5633">
 <img width="721" height="1280" class="portrait" src="images/jour1/33-rencontre-avec-les-dromadaires.jpg" alt="Rencontre avec les dromadaires" loading="lazy">
@@ -465,6 +509,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="tl-photo tl-portrait portrait" onclick="openLightbox(this)" style="--r:0.4625">
 <img width="592" height="1280" class="portrait" src="images/jour1/39a-la-caravane-se-reflete-dans-une-flaque.jpg" alt="La caravane se reflète dans une flaque" loading="lazy">
 <div class="tl-photo-caption">La caravane se reflète dans une flaque</div>
+</div>
+<div class="tl-photo portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour1/38a-olive-en-selle-vu-d-en-bas.jpg" alt="Olive en selle, vu d&#x27;en bas" loading="lazy">
+<div class="tl-photo-caption">Olive en selle, vu d'en bas</div>
 </div>
 </div>
 <div class="tl-item"><div class="tl-dot"></div>
@@ -512,6 +560,22 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <img width="1280" height="576" class="paysage" src="images/jour1/07-terrasse-couverte-du-camp.jpg" alt="Terrasse couverte du camp" loading="lazy">
 <div class="gallery-caption">Terrasse couverte du camp</div>
 </div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/07a-arrivee-au-camp-sacs-sur-le-dos.jpg" alt="Arrivée au camp, sacs sur le dos, sur les tapis rouges" loading="lazy">
+<div class="gallery-caption">Arrivée au camp, sacs sur le dos, sur les tapis rouges</div>
+</div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/07c-fanny-christophe-et-michele-arrivent-sur-les-tapis.jpg" alt="Fanny, Christophe et Michele arrivent au camp sur les tapis rouges" loading="lazy">
+<div class="gallery-caption">Fanny, Christophe et Michele arrivent au camp sur les tapis rouges</div>
+</div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/07b-les-tentes-du-camp-au-pied-des-collines.jpg" alt="Les tentes du camp au pied des collines" loading="lazy">
+<div class="gallery-caption">Les tentes du camp au pied des collines</div>
+</div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/07d-palmiers-et-pavillons-a-l-entree-du-camp.jpg" alt="Palmiers et pavillons à l&#x27;entrée du camp" loading="lazy">
+<div class="gallery-caption">Palmiers et pavillons à l'entrée du camp</div>
+</div>
 <div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:1.7753">
 <img width="1280" height="721" class="paysage" src="images/jour1/08-salon-du-camp-murs-de-terre-et-niches-decorees.jpg" alt="Salon du camp — murs de terre et niches décorées" loading="lazy">
 <div class="gallery-caption">Salon du camp — murs de terre et niches décorées</div>
@@ -552,6 +616,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <img width="1280" height="721" class="paysage" src="images/jour1/17-la-piscine-du-camp-face-aux-collines-d-agafay.jpg" alt="La piscine du camp face aux collines d&#x27;Agafay" loading="lazy">
 <div class="gallery-caption">La piscine du camp face aux collines d'Agafay</div>
 </div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/17a-la-piscine-du-camp-entre-palmiers-et-transats.jpg" alt="La piscine du camp entre palmiers et transats" loading="lazy">
+<div class="gallery-caption">La piscine du camp entre palmiers et transats</div>
+</div>
 <div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.2222">
 <img width="1280" height="576" class="paysage" src="images/jour1/18-parasols-et-transats-au-bord-de-la-piscine-du-camp.jpg" alt="Parasols et transats au bord de la piscine du camp" loading="lazy">
 <div class="gallery-caption">Parasols et transats au bord de la piscine du camp</div>
@@ -563,6 +631,18 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:1.7753">
 <img width="1280" height="721" class="paysage" src="images/jour1/21-casques-visses-depart-de-la-balade-en-quad.jpg" alt="Casques vissés, départ de la balade en quad" loading="lazy">
 <div class="gallery-caption">Casques vissés, départ de la balade en quad</div>
+</div>
+<div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour1/21a-fanny-casquee-avant-le-depart-en-quad.jpg" alt="Fanny, casquée, avant le départ en quad" loading="lazy">
+<div class="gallery-caption">Fanny, casquée, avant le départ en quad</div>
+</div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/21c-selfie-casque-olive-et-fanny-en-quad.jpg" alt="Selfie casqué d&#x27;Olive et Fanny en quad" loading="lazy">
+<div class="gallery-caption">Selfie casqué d'Olive et Fanny en quad</div>
+</div>
+<div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour1/21b-olive-et-fanny-sur-leur-quad.jpg" alt="Olive et Fanny sur leur quad" loading="lazy">
+<div class="gallery-caption">Olive et Fanny sur leur quad</div>
 </div>
 <div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.5633">
 <img width="721" height="1280" class="portrait" src="images/jour1/23-jeune-olivier-dans-la-terre-seche.jpg" alt="Jeune olivier dans la terre sèche" loading="lazy">
@@ -600,9 +680,17 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <img width="1280" height="721" class="paysage" src="images/jour1/31-pause-sur-les-hauteurs-d-agafay.jpg" alt="Pause sur les hauteurs d&#x27;Agafay" loading="lazy">
 <div class="gallery-caption">Pause sur les hauteurs d'Agafay</div>
 </div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour1/31a-la-plaine-d-agafay-l-atlas-dans-les-nuages.jpg" alt="La plaine d&#x27;Agafay, l&#x27;Atlas dans les nuages" loading="lazy">
+<div class="gallery-caption">La plaine d'Agafay, l'Atlas dans les nuages</div>
+</div>
 <div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:1.3928">
 <img width="1280" height="919" class="paysage" src="images/jour1/32-dromadaire-a-l-ombre-de-l-abri-quads-gares.jpg" alt="Dromadaire à l&#x27;ombre de l&#x27;abri, quads garés" loading="lazy">
 <div class="gallery-caption">Dromadaire à l'ombre de l'abri, quads garés</div>
+</div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.4641">
+<img width="1646" height="668" class="paysage" src="images/jour1/32a-la-caravane-passe-au-loin-vue-de-la-terrasse.jpg" alt="La caravane passe au loin, vue de la terrasse" loading="lazy">
+<div class="gallery-caption">La caravane passe au loin, vue de la terrasse</div>
 </div>
 <div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.5633">
 <img width="721" height="1280" class="portrait" src="images/jour1/33-rencontre-avec-les-dromadaires.jpg" alt="Rencontre avec les dromadaires" loading="lazy">
@@ -639,6 +727,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.5633">
 <img width="721" height="1280" class="portrait" src="images/jour1/38-christophe-juche-sur-son-dromadaire.jpg" alt="Christophe juché sur son dromadaire" loading="lazy">
 <div class="gallery-caption">Christophe juché sur son dromadaire</div>
+</div>
+<div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour1/38a-olive-en-selle-vu-d-en-bas.jpg" alt="Olive en selle, vu d&#x27;en bas" loading="lazy">
+<div class="gallery-caption">Olive en selle, vu d'en bas</div>
 </div>
 <div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:1.7753">
 <img width="1280" height="721" class="paysage" src="images/jour1/39-la-caravane-en-file-indienne.jpg" alt="La caravane en file indienne" loading="lazy">
@@ -726,6 +818,14 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="tl-time">Après-midi</div>
 <div class="tl-title">🤝 La plénière de la convention</div>
 <div class="tl-desc">L'après-midi, place au travail : plénière de la convention Terres de Fenêtre, « Toujours plus fort ensemble ! ». On écoute, on prend des notes, on retrouve les visages croisés le matin. C'est le cadre du voyage ; le reste, c'est du bonus.</div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:1.4595">
+<img width="1280" height="877" class="paysage" src="images/jour2/04b-ouverture-de-la-pleniere-bienvenue.jpg" alt="Ouverture de la plénière : bienvenue à toutes et à tous !" loading="lazy">
+<div class="tl-photo-caption">Ouverture de la plénière : bienvenue à toutes et à tous !</div>
+</div>
+<div class="tl-photo portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour2/04a-la-pleniere-de-la-convention-table-ronde-sur-scene.jpg" alt="La plénière de la convention, table ronde sur scène" loading="lazy">
+<div class="tl-photo-caption">La plénière de la convention, table ronde sur scène</div>
+</div>
 </div>
 <div class="tl-item"><div class="tl-dot"></div>
 <div class="tl-time">Soir</div>
@@ -738,6 +838,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:1.7753">
 <img width="1280" height="721" class="paysage" src="images/jour2/06-pelouse-semee-de-lanternes-sous-les-oliviers.jpg" alt="Pelouse semée de lanternes sous les oliviers" loading="lazy">
 <div class="tl-photo-caption">Pelouse semée de lanternes sous les oliviers</div>
+</div>
+<div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour2/07a-les-arcades-du-beldi-sous-les-projecteurs.jpg" alt="Les arcades du Beldi sous les projecteurs" loading="lazy">
+<div class="tl-photo-caption">Les arcades du Beldi sous les projecteurs</div>
 </div>
 <div class="tl-gps"><a href="https://maps.google.com/?q=31.5702,-8.0286" target="_blank" rel="noopener">📍 Beldi Country Club · 31.570, -8.029</a></div>
 </div>
@@ -754,6 +858,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <img width="858" height="1280" class="portrait" src="images/jour2/19-les-convives-sous-les-lanternes.jpg" alt="Les convives sous les lanternes" loading="lazy">
 <div class="tl-photo-caption">Les convives sous les lanternes</div>
 </div>
+</div>
+<div class="tl-photo portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour2/22a-le-couscous-royal-du-gala.jpg" alt="Le couscous royal du gala, servi sous la cloche" loading="lazy">
+<div class="tl-photo-caption">Le couscous royal du gala, servi sous la cloche</div>
 </div>
 </div>
 </div>
@@ -775,6 +883,14 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <img width="1280" height="721" class="paysage" src="images/jour2/04-la-grande-piscine-du-sol-oasis-au-soleil.jpg" alt="La grande piscine du Sol Oasis au soleil" loading="lazy">
 <div class="gallery-caption">La grande piscine du Sol Oasis au soleil</div>
 </div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:1.4595">
+<img width="1280" height="877" class="paysage" src="images/jour2/04b-ouverture-de-la-pleniere-bienvenue.jpg" alt="Ouverture de la plénière : bienvenue à toutes et à tous !" loading="lazy">
+<div class="gallery-caption">Ouverture de la plénière : bienvenue à toutes et à tous !</div>
+</div>
+<div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour2/04a-la-pleniere-de-la-convention-table-ronde-sur-scene.jpg" alt="La plénière de la convention, table ronde sur scène" loading="lazy">
+<div class="gallery-caption">La plénière de la convention, table ronde sur scène</div>
+</div>
 <div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:1.7753">
 <img width="1280" height="721" class="paysage" src="images/jour2/05-arrivee-au-beldi-arcades-illuminees.jpg" alt="Arrivée au Beldi — arcades illuminées" loading="lazy">
 <div class="gallery-caption">Arrivée au Beldi — arcades illuminées</div>
@@ -786,6 +902,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:1.8796">
 <img width="1280" height="681" class="paysage" src="images/jour2/07-les-arcades-du-beldi-au-fond-du-jardin.jpg" alt="Les arcades du Beldi au fond du jardin" loading="lazy">
 <div class="gallery-caption">Les arcades du Beldi au fond du jardin</div>
+</div>
+<div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:2.1641">
+<img width="2400" height="1109" class="paysage" src="images/jour2/07a-les-arcades-du-beldi-sous-les-projecteurs.jpg" alt="Les arcades du Beldi sous les projecteurs" loading="lazy">
+<div class="gallery-caption">Les arcades du Beldi sous les projecteurs</div>
 </div>
 <div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.6852">
 <img width="877" height="1280" class="portrait" src="images/jour2/08-oliviers-et-lanternes-sur-la-pelouse.jpg" alt="Oliviers et lanternes sur la pelouse" loading="lazy">
@@ -847,6 +967,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <img width="721" height="1280" class="portrait" src="images/jour2/22-le-menu-du-gala-couscous-royal-et-pastilla-aux-fruits.jpg" alt="Le menu du gala — couscous royal et pastilla aux fruits" loading="lazy">
 <div class="gallery-caption">Le menu du gala — couscous royal et pastilla aux fruits</div>
 </div>
+<div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour2/22a-le-couscous-royal-du-gala.jpg" alt="Le couscous royal du gala, servi sous la cloche" loading="lazy">
+<div class="gallery-caption">Le couscous royal du gala, servi sous la cloche</div>
+</div>
 </div>
 </section>
 <section class="section" id="jour3">
@@ -881,6 +1005,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:1.7753">
 <img width="1280" height="721" class="paysage" src="images/jour3/05-place-jemaa-el-fna-sous-les-drapeaux-marocains.jpg" alt="Place Jemaa el-Fna sous les drapeaux marocains" loading="lazy">
 <div class="tl-photo-caption">Place Jemaa el-Fna sous les drapeaux marocains</div>
+</div>
+<div class="tl-photo portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour3/06a-michele-fanny-et-christophe-sous-les-drapeaux.jpg" alt="Michele, Fanny et Christophe sous les drapeaux de Jemaa el-Fna" loading="lazy">
+<div class="tl-photo-caption">Michele, Fanny et Christophe sous les drapeaux de Jemaa el-Fna</div>
 </div>
 <div class="tl-photo paysage" onclick="openLightbox(this)" style="--r:1.3333">
 <img width="1280" height="960" class="paysage" src="images/jour3/06-drapeaux-marocains-au-vent-sur-la-place.jpg" alt="Drapeaux marocains au vent sur la place" loading="lazy">
@@ -1008,6 +1136,10 @@ Quatre jours à Marrakech, du 5 au 8 novembre 2026. Un prétexte professionnel �
 <div class="gallery-item paysage" onclick="openLightbox(this)" style="--r:1.3333">
 <img width="1280" height="960" class="paysage" src="images/jour3/06-drapeaux-marocains-au-vent-sur-la-place.jpg" alt="Drapeaux marocains au vent sur la place" loading="lazy">
 <div class="gallery-caption">Drapeaux marocains au vent sur la place</div>
+</div>
+<div class="gallery-item portrait" onclick="openLightbox(this)" style="--r:0.4621">
+<img width="1109" height="2400" class="portrait" src="images/jour3/06a-michele-fanny-et-christophe-sous-les-drapeaux.jpg" alt="Michele, Fanny et Christophe sous les drapeaux de Jemaa el-Fna" loading="lazy">
+<div class="gallery-caption">Michele, Fanny et Christophe sous les drapeaux de Jemaa el-Fna</div>
 </div>
 <div class="gallery-item carre" onclick="openLightbox(this)" style="--r:0.9039">
 <img width="1157" height="1280" class="carre" src="images/jour3/07-selfie-a-quatre-avec-olive-et-fanny-sur-jemaa-el-fna.jpg" alt="Selfie à quatre avec Olive et Fanny sur Jemaa el-Fna" loading="lazy">
@@ -1242,7 +1374,10 @@ function openLightbox(el) {
 function showLightboxPhoto() {
   const p = allPhotos[currentLBIndex];
   if (!p) return;
-  document.getElementById('lightbox-img').src = p.src;
+  const lb = document.getElementById('lightbox-img');
+  // taille réelle connue au chargement : plafonne à min(92vw, largeur réelle) — jamais d'étirement
+  lb.onload = () => { lb.style.maxWidth = 'min(92vw, ' + lb.naturalWidth + 'px)'; lb.style.maxHeight = 'min(80vh, ' + lb.naturalHeight + 'px)'; };
+  lb.src = p.src;
   document.getElementById('lightbox-caption').textContent = p.caption;
   document.getElementById('lightbox-counter').textContent = (currentLBIndex + 1) + ' / ' + allPhotos.length;
 }
